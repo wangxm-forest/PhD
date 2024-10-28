@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pgfgantt}
+\usepackage{geometry}
+\geometry{%
+  paperheight=11in,
+  paperwidth=20in,
+  top=1in,
+  bottom=1in,
+  right=1in,
+  left=0.1in,}
+\begin{document}
+\begin{figure}[tbp]
+    \begin{center}
+    
+    \begin{ganttchart}[y unit title=0.4cm,
+    y unit chart=0.5cm,
+    vgrid,hgrid, 
+    title label anchor/.style={below=-1.6ex},
+    title left shift=.05,
+    title right shift=-.05,
+    title height=1,
+    progress label text={},
+    bar height=0.7,
+    group right shift=0,
+    group top shift=.6,
+    group height=.3]{1}{88}
+    %labels
+    \gantttitle{2024}{4}
+    \gantttitle{2025}{24}
+    \gantttitle{2026}{24}
+    \gantttitle{2027}{24}
+    \gantttitle{2028}{12}    
+     \\
+    \gantttitle{Nov-Dec}{4} 
+    \gantttitle{Jan-Feb}{4} 
+    \gantttitle{Mar-Apr}{4}
+    \gantttitle{May-Jun}{4}
+    \gantttitle{Jul-Aug}{4}
+    \gantttitle{Sep-Oct}{4} 
+    \gantttitle{Nov-Dec}{4}
+    \gantttitle{Jan-Feb}{4} 
+    \gantttitle{Mar-Apr}{4}
+    \gantttitle{May-Jun}{4}
+    \gantttitle{Jul-Aug}{4}
+    \gantttitle{Sep-Oct}{4} 
+    \gantttitle{Nov-Dec}{4}
+    \gantttitle{Jan-Feb}{4} 
+    \gantttitle{Mar-Apr}{4}
+    \gantttitle{May-Jun}{4}
+    \gantttitle{Jul-Aug}{4}
+    \gantttitle{Sep-Oct}{4} 
+    \gantttitle{Nov-Dec}{4}
+    \gantttitle{Jan-Feb}{4} 
+    \gantttitle{Mar-Apr}{4}
+    \gantttitle{May-Jun}{4}\\
+    %tasks
+    \ganttbar{Research proposal}{1}{4} \\
+    \ganttbar{Comprehensive exam}{5}{8} \\
+    \ganttbar{Sample processing}{1}{8} \\
+    \ganttbar{Fieldwork}{17}{20}\\
+    \ganttbar{Data analysis}{9}{28} \\
+    \ganttbar{Mast-trait manuscript}{28}{40} \\
+    \ganttbar{Trade-off manuscript}{52}{65} \\
+    \ganttbar{Dissertation writing}{39}{80} \\
+    \ganttbar{Defense}{81}{88}
+
+    \end{ganttchart}
+    \end{center}
+    \caption{Gantt Chart}
+
+\end{figure}
+\end{document}
