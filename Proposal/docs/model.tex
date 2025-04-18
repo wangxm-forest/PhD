@@ -1,0 +1,53 @@
+\textbf{Likelihood for Seed Production}\\
+
+The seed count for a particular stand \(j\), species \(sp\), and year \(y\) follows a negative binomial distribution with mean \(\lambda_{j,sp,y}\) and dispersion term \(\phi\):
+
+\[
+\text{Seed}_{j,sp,y} \sim \text{NegBinomial}(\lambda_{j,sp,y}, \phi)
+\]
+
+The modeled seed count (\(\lambda_{j,sp,y}\)) for stand \(j\), species \(sp\), and year \(y\) is:
+
+\[
+\log(\lambda_{j, sp, y}) =\alpha_{\text{0,seed}} + \alpha_{\text{sp}} + \alpha_{\text{j}} + \beta_{\text{1,sp}} \cdot \text{Growth}_{j,sp,y} + \beta_{\text{2,sp}} \cdot \text{Growth}_{j,sp,y-1} + \beta_{\text{3,sp}} \cdot \text{Elevation}_{j}
+\]
+\documentclass[11pt,letter]{article}
+\usepackage[top=1.00in, bottom=1.0in, left=1.1in, right=1.1in]{geometry}
+\renewcommand{\baselinestretch}{1.5}
+\usepackage{graphicx}
+\usepackage{natbib}
+\usepackage{amsmath}
+\usepackage{hyperref}
+
+\def\labelitemi{--}
+\begin{document}
+
+Where:\\
+\(\alpha_{\text{0,seed}}\) is the grand mean across all species, stands and years;\\
+\(\alpha_{\text{sp}}\) is the species-specific intercept for species sp;\\
+\(\alpha_{\text{j}}\) is the stand-specific intercept for stand j;\\
+\(\beta_{\text{1,sp}}\) is the slope for the relationship between current-year growth and seed production for species \(sp\);\\
+\(\beta_{\text{2,sp}}\) is the slope for the relationship between previous-year growth and seed production as the lag effect for species \(sp\);\\
+\(\beta_{\text{3,sp}}\) is the effect of elevation on seed production for species \(sp\).\\
+
+
+\textbf{Likelihood for Radial Growth}
+
+The log of the radial growth \(\text{Growth}_y\) of individual tree \(i\) for a particular stand \(j\), species \(sp\), and year \(y\) follows a normal distribution with mean\(\mu_{i, y_{\text{sp}, j}}\) and standard deviation \(\sigma_{\text{growth}}\):
+
+\[
+\log(\text{Growth}_i) \sim \text{Normal}(\mu_i, \sigma_{\text{growth}})
+\]
+
+Where the mean \(\mu_i\) is:
+
+\[
+\mu_i = \alpha_{\text{0,growth}} + \alpha_{\text{sp}[i]} + \alpha_{j[i]} + \beta^{\text{sp}[i]}_1 \cdot \text{Elevation}_{j[i]}
+\]
+
+Where:\\
+\(\alpha_{\text{0,growth}}\) is the grand mean across all species, stands and years;\\
+\(\alpha_{\text{sp}[i]}\) is the species-specific intercept for species sp;\\
+\(\alpha_{j[i]}\) is the stand-specific intercept for stand j;\\
+\(\beta^{\text{sp}[i]}_1\) is the slope for the relationship between elevation and growth for species \(sp\).\\
+\end{document}
