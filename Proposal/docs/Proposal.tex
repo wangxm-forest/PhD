@@ -48,6 +48,7 @@ When seeds mature and are ready for dispersal, the role of seed predators become
 	\caption{Conceptual framework linking reproductive traits to the phenomenon of masting across critical stages of seed reproduction. The symbols indicate different hypotheses. I include the information on whether the traits are categorical or continuous below each trait.}
 	\label{fig:conceptual1}
 \end{figure}
+\pagebreak
 My proposed work advances on previous studies in this area, which have explored the relationship between limited traits and interannual variability in seed production to test for support for different hypotheses \citep{fernandez2019nutrient, journe2023evolution, pearse2020biogeography}, but did not explain how different environmental conditions may link to which reproductive traits are more critical. In this meta-analysis, I will include more reproductive traits associated with different hypotheses (Figure \ref{fig:conceptual1}) to investigate how these traits are related to a species' tendency to mast in different forest types and biomes.\par
 
 \subsection{Research Question and Objectives}
@@ -104,14 +105,15 @@ This chapter aims to examine the growth-reproduction trade-off in relation to ma
 	\label{fig:sites}
 \end{figure}
 \textbf{Study site and sample collection}\\
-I will conduct this study in Mount Rainier National Park, Washington, USA, focusing on six common conifer species that exhibit varying masting behaviors and occur across different elevations in the park (Figure \ref{fig:sites}).\\
-The data I plan to use in this chapter include two components:\\
-\begin{figure}[htb]
+I will conduct this study in Mount Rainier National Park, Washington, USA, focusing on six common conifer species that exhibit varying masting behaviors and occur across different elevations in the park (Figure \ref{fig:sites}).\par
+\pagebreak
+\begin{figure}[!h]
 	\centering
 	\includegraphics[width=1\linewidth]{Seed1.jpg}
 	\caption{Seed data across all 10 stands collected by seed traps from 2009-2017 at Mount Rainier. (a) total seeds (sum of filled and empty seeds) for all six species; (b) total seeds for only five species excluding TSHE in finer resolution with different y-axis scale. Short blue arrows indicate potential masting years. ABAM: \textit{Abies amabilis}, CANO:  \textit{Callitropsis nootkatensis}, PSME: \textit{Pseudotsuga menziesii}, THPL: \textit{Thuja plicata}, TSHE: \textit{Tsuga heterophylla}, TSME: \textit{Tsuga mertensiana}.}
 	\label{fig:seed}
 \end{figure}
+The data I plan to use in this chapter include two components:
 \begin{itemize}
 	\item \textbf{Long-term seed data:} Our collaborator Dr. Janneke Hille Ris Lambers, has been collecting stand-level seed production data using seed traps since 2008, which will provide a valuable record of masting events across different stands and elevations at Mount Rainier  (Figure \ref{fig:seed}).
 \begin{table}[!h]
@@ -129,7 +131,7 @@ The data I plan to use in this chapter include two components:\\
 \textit{Callitropsis nootkatensis} & Yellow cedar\\ \hline
 \end{tabular}
 \label{table:species}
-\end{table}\\
+\end{table}
 	\item \textbf{Tree growth data:}  To assess the historical growth of individual trees, I will collect cores from targeted species in Table \ref{table:species} in each stand with long-term seed data. Within each stand, there are at least two targeted species, and each species appears in at least four stands. I plan to collect tree cores from 25 individuals per species per stand, covering a size gradient. To make sure the trees we core are mature enough to reproduce at least 10 years ago to match with seed trap time window, I will only collect from trees with DBH greater than 25 cm. Additionally, I will prioritize individuals that are close to seed traps to better correlate with seed data. I will core trees at breast height using increment borers, taking two tree cores from the opposite sides of the tree while avoiding slopes. To account for at least 15 years of growth and for cross-dating purposes, I will collect long cores of 25 cm from larger trees with a DBH above 50 cm, while for smaller trees, I will core to the center if possible.
 	\end{itemize}
 \textbf{Tree core processing}\\
@@ -143,15 +145,11 @@ My proposed model investigates the trade-offs between growth (radial growth) and
 %emw17Apr2025: I suggest you pull out the math you have here into a new tex file and work on it separately from the proposal (I suggested this before, and I am suggesting it again). Then we can work on the model. Trying to decide on the model here within the proposal is not easy for me. If you want to keep doing it, you can, but it will take a while I believe to correct all of it enough to send the proposal to your committee. So I recommend you proceed on two tracks (1) pull out the math you have here into a new tex file and work on it separately from the proposal with me and with Victor, (2) keep your seed model here then in text only describe your progress towards the next steps of the model (example shown below that builds on text below).  
 % My proposed model investigates the trade-offs between growth (radial growth) and reproduction (seed production). It partially pools species and stands to allow for variation, while sharing information between groups to produce an overall estimate. Thus far, I have developed the model for seed production (below) and am developing the model for radial growth, which is more complex in that I need to decide how to remove size effects for each tree, then scale up all trees to a stand-level estimate that I can then use to model the relationship between growth and reproduction. 
 \textbf{Likelihood for Seed Production}\\
-
 The seed count for a particular stand \(j\), species \(sp\), and year \(y\) follows a negative binomial distribution with mean \(\lambda_{j,sp,y}\) and dispersion term \(\phi\):
-
 \[
 \text{Seed}_{j,sp,y} \sim \text{NegBinomial}(\lambda_{j,sp,y}, \phi)
 \]
-
 The modeled seed count (\(\lambda_{j,sp,y}\)) for stand \(j\), species \(sp\), and year \(y\) is:
-
 \[
 \log(\lambda_{j, sp, y}) =\alpha_{\text{0}} + \alpha_{\text{sp}} + \alpha_{\text{j}} + \beta_{\text{1,sp}} \cdot \text{Growth}_{j,sp,y} + \beta_{\text{2,sp}} \cdot \text{Growth}_{j,sp,y-1} + \beta_{\text{3,sp}} \cdot \text{Elevation}_{j}
 \]
