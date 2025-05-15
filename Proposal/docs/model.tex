@@ -16,7 +16,7 @@ Growth data is on individual level, while seed data is on stand level, so I will
 For each individual tree \(i\) in stand \(j\), species \(sp\), and year \(y\), the observed radial growth is modeled as, with \(sigma\) being the variance across individuals:
 
 \[
-\text{Growth}_{i,j,sp,y} \sim \text{Normal}(\mu_{j,sp,y}, \sigma^2)
+\text{Growth}_{j,sp,y[i]} \sim \text{Normal}(\mu_{j,sp,y}, \sigma^2)
 \]
 
 The seed count for a particular stand \(j\), species \(sp\), and year \(y\) follows a negative binomial distribution with mean \(\lambda_{j,sp,y}\) and dispersion term \(\phi\):
@@ -28,36 +28,36 @@ The seed count for a particular stand \(j\), species \(sp\), and year \(y\) foll
 The modeled seed count (\(\lambda_{j,sp,y}\)) for stand \(j\), species \(sp\), and year \(y\) is:
 
 \[
-\log(\lambda_{j, sp, y}) =\alpha_{0} + \alpha_{sp} + \alpha_{j} + (\beta_{1,sp} + \beta_{1,j}) \cdot \mu_{j,sp,y} + (\beta_{2,sp} + \beta_{2,j}) \cdot \mu_{j,sp,y-1} + \beta_{3,sp} \cdot \text{Elevation}_{j}
+\log(\lambda_{j, sp, y}) =\alpha_{0} + \alpha_{sp} + \alpha_{j} + (\beta_{1 sp} + \beta_{1 j}) \cdot \mu_{j,sp,y} + (\beta_{2 sp} + \beta_{2 j}) \cdot \mu_{j,sp,y-1} + \beta_{3 sp} \cdot \text{Elevation}_{j}
 \]
 
 Where:\\
 \(\alpha_{0}\) is the grand mean across all species, stands and years;\\
 \(\alpha_{sp}\) is the species-specific intercept for species sp;\\
 \(\alpha_{j}\) is the stand-specific intercept for stand j;\\
-\(\beta_{1,sp}\) is the slope for the relationship between current-year growth and seed production for species \(sp\);\\
-\(\beta_{1,j}\) is the slope for the relationship between current-year growth and seed production for stand \(j\);\\
+\(\beta_{1 sp}\) is the slope for the relationship between current-year growth and seed production for species \(sp\);\\
+\(\beta_{1 j}\) is the slope for the relationship between current-year growth and seed production for stand \(j\);\\
 \(\mu_{j,sp,y}\) is the mean growth for stand \(j\), species \(sp\), and year \(y\);\\
-\(\beta_{\text{2,sp}}\) is the slope for the relationship between previous-year growth and seed production as the lag effect for species \(sp\);\\
-\(\beta_{\text{2,j}}\) is the slope for the relationship between previous-year growth and seed production as the lag effect for stand \(j\);\\
-\(\beta_{\text{3,sp}}\) is the effect of elevation on seed production for species \(sp\).\\
+\(\beta_{2 sp}\) is the slope for the relationship between previous-year growth and seed production as the lag effect for species \(sp\);\\
+\(\beta_{2 j}\) is the slope for the relationship between previous-year growth and seed production as the lag effect for stand \(j\);\\
+\(\beta_{3 sp}\) is the effect of elevation on seed production for species \(sp\).\\
 
 \textbf{Priors for Random Slopes}
 \[
-\beta_{1,\text{sp}} \sim \text{Normal}(0, \sigma_{\beta_1,\text{sp}})
+\beta_{1 sp} \sim \text{Normal}(0, \sigma_{\beta_1 sp})
 \]
 \[
-\beta_{2,\text{sp}} \sim \text{Normal}(0, \sigma_{\beta_2,\text{sp}})
+\beta_{2 sp} \sim \text{Normal}(0, \sigma_{\beta_2 sp})
 \]
 \[
-\beta_{1,j} \sim \text{Normal}(0, \sigma_{\beta_1,j})
+\beta_{1 j} \sim \text{Normal}(0, \sigma_{\beta_1 j})
 \]
 \[
-\beta_{2,j} \sim \text{Normal}(0, \sigma_{\beta_2,j})
+\beta_{2 j} \sim \text{Normal}(0, \sigma_{\beta_2 j})
 \]
 
 Where:\\
-\(\sigma_{\beta_1,\text{sp}}\) and \(\sigma_{\beta_2,\text{sp}}\) represent the standard deviations for the random slopes at the species level;\\
-\(\sigma_{\beta_1,j}\) and \(\sigma_{\beta_2,j}\) represent the standard deviations for the random slopes at the stand level.
+\(\sigma_{\beta_1 sp}\) and \(\sigma_{\beta_2 sp}\) represent the standard deviations for the random slopes at the species level;\\
+\(\sigma_{\beta_1 j}\) and \(\sigma_{\beta_2 j}\) represent the standard deviations for the random slopes at the stand level.
 
 \end{document}
