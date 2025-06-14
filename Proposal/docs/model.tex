@@ -32,27 +32,36 @@ The seed count for a particular stand \(j\), species \(sp\), and year \(y\) foll
 \]
 
 The modeled seed count (\(\lambda_{j,sp,y}\)) for stand \(j\), species \(sp\), and year \(y\) is:
-
-\[
-\log(\lambda_{j, sp, y}) =\alpha_{0} + \alpha_{sp} + \alpha_{j} + (\beta_{1 sp} + \beta_{1 j}) \cdot \mu_{j,sp,y} + (\beta_{2 sp} + \beta_{2 j}) \cdot \mu_{j,sp,y-1} + \beta_{3 sp} \cdot \text{Elevation}_{j}
-\]
-
 % emw2025May20 -- The above equation seems close, especially, once we update the growth equation. I think you need a growth model that estimates an average of tree growth at the stand level and an average of tree growth at the stand x species level -- they cannot be the same parameter as they are here. 
 
 % emw2025May20 -- I would (please make these changes now and send back to me): (1) divide up how you explain the parameters into groups for your readers (I give an example for the first three, start this for all, even though we'll need to adjust), and (2) try to explain everything as simply and biologically as possible, then give the statistical terms (like slope and intercept, see example below). 
+\[
+\log(\lambda_{j, sp, y}) =\alpha_{0} + \alpha_{sp} + \alpha_{j} + (\beta_{1 sp} + \beta_{1 j}) \cdot \mu_{j,sp,y} + (\beta_{2 sp} + \beta_{2 j}) \cdot \mu_{j,sp,y-1} + \beta_{3 sp} \cdot \text{Elevation}_{j}
+\]
+\\
 This approach allows variation in the seed count due to species and year---independent of tree growth---via \\
-\(\alpha_{0}\) a baseline seed count (i.e., the grand mean across all species, stands and years not explained by any other components of the model);\\
-\(\alpha_{sp}\) the effect of each species on this baseline (that is a species-specific intercept for each species $sp$, which is modeled as an offset from the baseline);\\ % emw2025May20 -- repeat this phrase for the next intercept
-\(\alpha_{j}\) is the stand-specific intercept for stand j;\\
-It also allows variation in seed count due to tree growth in both the current previous years: % emw2025May20 -- see if you can rewrite below with 'slope' in () only? 
-\(\beta_{1 sp}\) is the slope for the relationship between current-year growth and seed production for species \(sp\);\\
-\(\beta_{1 j}\) is the slope for the relationship between current-year growth and seed production for stand \(j\);\\
-\(\mu_{j,sp,y}\) is the mean growth for stand \(j\), species \(sp\), and year \(y\);\\
-\(\beta_{2 sp}\) is the slope for the relationship between previous-year growth and seed production as the lag effect for species \(sp\);\\
-\(\beta_{2 j}\) is the slope for the relationship between previous-year growth and seed production as the lag effect for stand \(j\);\\
-\(\beta_{3 sp}\) is the effect of elevation on seed production for species \(sp\).\\ % emw2025May20 -- whatever you do don't switch terms for the same things (it's confusing to readers) -- so if you say 'slope' above, do not switch to 'effect' here when you mean the same thing. 
-
-\textbf{Priors for Random Slopes}
+\(\alpha_{0}\): a baseline seed count (i.e., the grand mean across all species, stands and years not explained by any other components of the model);\\
+\(\alpha_{sp}\): the effect of each species on this baseline (that is a species-specific intercept for each species $sp$, which is modeled as an offset from the baseline);\\ 
+\(\alpha_{j}\): the effect of each stand on this baseline (that is a stand-specific intercept for each stand \(j\), which is modeled as an offset from the baseline);\\
+\\
+It also allows variation in seed count due to tree growth in both the current previous years:\\
+\(\beta_{1 sp}\): the effect of current-year growth on seed production for species \(sp\) (that is a species-specific slope for the relationship between current-year growth and seed production);\\
+\(\beta_{1 j}\): the effect of current-year growth on seed production for stand \(j\) (that is a stand-specific slope for the relationship between current-year growth and seed production);\\
+\(\mu_{j,sp,y}\): the mean growth of species \(sp\) in stand\(j\) in year \(y\);\\
+\(\beta_{2 sp}\): the effect of previous-year growth (lag effect) on seed production for species \(sp\) (that is a species-specific slope for the relationship between previous growth and seed production);\\
+\(\beta_{2 j}\): the effect of previous-year growth (lag effect) on seed production for stand \(j\) (that is a stand-specific slope for the relationship between previous growth and seed production);\\
+\(\beta_{3 sp}\): the effect of elevation on seed production for species \(sp\) (that is a species-specific slope for the relationship between elevation and seed production).\\
+\\
+\textbf{Priors for varying intercepts and slopes}\\
+We specify normal priors for both species- and stand-level deviations in intercepts and slopes. These priors allow species and stands to vary around the overall mean relationships in a structured way:\\
+\textbf{Species and stand-level intercepts}
+\[
+\alpha_{sp} \sim \text{Normal}(0, \sigma_{\alpha_sp})
+\]
+\[
+\alpha_{j} \sim \text{Normal}(0, \sigma_{\alpha_j})
+\]
+\textbf{Species and stand-level slopes for growth effects}
 \[
 \beta_{1 sp} \sim \text{Normal}(0, \sigma_{\beta_1 sp})
 \]
@@ -65,9 +74,11 @@ It also allows variation in seed count due to tree growth in both the current pr
 \[
 \beta_{2 j} \sim \text{Normal}(0, \sigma_{\beta_2 j})
 \]
-
-Where:\\ % emw2025May20 -- you're missing all the normals here for your intercepts 
-\(\sigma_{\beta_1 sp}\) and \(\sigma_{\beta_2 sp}\) represent the standard deviations for the random slopes at the species level;\\
-\(\sigma_{\beta_1 j}\) and \(\sigma_{\beta_2 j}\) represent the standard deviations for the random slopes at the stand level. % emw2025May20 -- I don't like the term random effects, so we only use in papers in the lab parenthetically. Can you review Gelman books and writing in our lab papers and find a better way to explain this?
+\\
+Where:\\ 
+\(\sigma_{\alpha_sp}\): how much variation is expected from the baseline seed count across species (species level standard deviation);\\
+\(\sigma_{\alpha_j}\): how much variation is expected from the baseline seed count across stand (stand level standard deviation);\\
+\(\sigma_{\beta_1 sp}\) and \(\sigma_{\beta_2 sp}\): the extent of variation in these growth–seed production relationships across species (species level variation around the slope);\\
+\(\sigma_{\beta_1 j}\) and \(\sigma_{\beta_2 j}\): the extent of variation in these growth–seed production relationships across stand (stand level variation around the slope).
 
 \end{document}
