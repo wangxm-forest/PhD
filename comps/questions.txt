@@ -1,0 +1,78 @@
+Basic Ecology Questions (General)
+
+These test foundational knowledge across population, community, and ecosystem ecology.
+
+Population Ecology
+
+What are the key assumptions of the logistic growth model? How does it differ from exponential growth?
+
+Explain the concept of carrying capacity. What factors determine it in a forest ecosystem?
+
+Describe r- vs. K-selection. Where do most forest tree species fall on this spectrum?
+
+How do density-dependent and density-independent factors regulate populations?
+
+Community Ecology
+
+Define niche, and explain the difference between fundamental and realized niches.
+
+What are the main types of species interactions (e.g., competition, mutualism)? Give forest-specific examples.
+
+What is ecological succession? How do primary and secondary succession differ in forest systems?
+
+What are keystone species? Can you give an example in a forest context?
+
+Ecosystem Ecology
+
+Describe the carbon and nitrogen cycles in forest ecosystems.
+
+What factors control primary productivity in forests?
+
+What is the difference between gross and net primary productivity (GPP vs. NPP)?
+
+How does nutrient cycling differ between temperate and tropical forests?
+
+Climate Change & Forest Ecology
+
+These will bridge your general knowledge with your area of expertise.
+
+How does climate change affect forest productivity and species composition?
+
+What are the expected impacts of increased CO₂ on forest growth? Discuss CO₂ fertilization.
+
+How do drought and heatwaves affect tree physiology and forest structure?
+
+What are the mechanisms and consequences of forest dieback under climate stress?
+
+How does climate change influence forest disturbance regimes (e.g., fire, insects, windstorms)?
+
+How do forests act as carbon sinks or sources under changing climate conditions?
+
+What role do forests play in the global carbon cycle?
+
+Methodology / Data Interpretation
+
+You might also be asked to demonstrate practical or analytical skills.
+
+How would you design a study to assess the impact of drought on forest regeneration?
+
+What remote sensing tools can be used to monitor forest health?
+
+How can dendrochronology inform our understanding of past climate conditions?
+
+What are the advantages and limitations of using eddy covariance to measure forest carbon flux?
+
+Conceptual & Integrative Questions
+
+These are more open-ended and may be used to test your ability to synthesize.
+
+How would you define “resilience” in a forest ecosystem? How can it be measured?
+
+Discuss the concept of “novel ecosystems” in the context of climate change.
+
+What are trade-offs in forest management under climate change (e.g., between carbon storage and biodiversity)?
+
+If you were advising a policymaker, how would you explain the importance of forest conservation for climate mitigation?
+
+How do trees grow taller, how do trees grow in diameter?
+Trees grow taller and expand their crowns through a process known as primary growth. Trees increase in diameter via secondary growth. Trees have apical (or terminal) buds at the ends of branches and shoots. In the spring, when buds open, the new shoots begin actively elongating and the small leaves – that overwintered inside the bud – unfurl and grow into full-sized leaves.
