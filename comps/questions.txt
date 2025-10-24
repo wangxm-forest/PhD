@@ -76,3 +76,26 @@ If you were advising a policymaker, how would you explain the importance of fore
 
 How do trees grow taller, how do trees grow in diameter?
 Trees grow taller and expand their crowns through a process known as primary growth. Trees increase in diameter via secondary growth. Trees have apical (or terminal) buds at the ends of branches and shoots. In the spring, when buds open, the new shoots begin actively elongating and the small leaves – that overwintered inside the bud – unfurl and grow into full-sized leaves.
+
+Ecological systems often involve complex interactions and long-term processes that are not easily observed or manipulated. How might this complexity pose challenges for both inductivist and falsificationist views of science?
+Chalmers presents scientific realism and anti-realism as two responses to the success of science. Where do you think ecological models fit into this debate? Are they representations of reality or useful tools for prediction only?
+
+Lakatos’ idea of research programs includes a “hard core” and a “protective belt.” Identify an ecological theory or framework (e.g., island biogeography, niche theory, ecosystem services) and describe its hard core and how its protective belt has been adjusted over time.
+
+Thomas Kuhn emphasized “normal science” and paradigm shifts. Can you identify a moment in ecology where a paradigm shift occurred?
+
+How do Bayesian approaches in ecological modeling challenge or support traditional views of scientific reasoning (as discussed by Chalmers)?
+
+Given the high uncertainty and variability in ecological systems, how does Chalmers’ discussion of theory-ladenness of observation apply to ecological field methods?
+
+Ecologists often use proxies or indirect measures (e.g., NDVI for productivity, species presence for habitat quality). According to Chalmers’ treatment of unobservable entities, how should these be interpreted?
+
+Chalmers criticizes the naïve use of inductivism. In ecological meta-analysis or synthesis studies, how is induction used and how can it be philosophically justified (or critiqued)?
+
+How do ecological surprises (e.g., species reappearances, regime shifts) fit into the framework of scientific progress described by Popper, Kuhn, or Lakatos?
+
+Do you believe ecology can ever have laws in the same sense as physics? How does Chalmers’ discussion of regularities, causality, and laws inform your answer?
+
+Historically, how has the development of ecology reflected changes in the philosophy of science?
+
+If ecology does not always follow the ‘scientific method’ described by early inductivists, should it still be considered a science? What criteria from Chalmers’ book can help evaluate this?
