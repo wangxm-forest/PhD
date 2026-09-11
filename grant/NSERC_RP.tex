@@ -4,6 +4,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
+\usepackage{hyperref}
 
 % Page layout settings
 \usepackage[margin=1.87cm]{geometry}
@@ -21,7 +22,7 @@
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 % For references
-\usepackage[square,numbers]{natbib}
+\usepackage{natbib}
 
 \pagestyle{fancy}
 \fancyhf{} % clear header/footer
@@ -31,30 +32,28 @@
 
 \begin{document}
 \section*{Growth and Reproductive Trade-offs in Mast-Seeding Trees}
-\textbf{Context} The fundamental processes in a plant’s life cycle—growth, reproduction, defense—all compete for the same resources \citep{bazzaz1997plant}, leading to trade-offs that maximize plant fitness when resources are limited. One key trade-off is the growth-reproduction trade-off \citep{grime1977evidence, stearns1998evolution}, which can lead to high variability in reproduction across years. In many species, this is manifested as mast seeding, the phenomenon of synchronized variable seed production within plant populations \citep{kelly1994evolutionary, kelly2002mast, koenig2021brief, pearse2016mechanisms}.
+\textbf{Context} The fundamental processes in a plant’s life cycle—growth, reproduction, defense—all compete for the same resources \citep{bazzaz1997plant}, leading to trade-offs that maximize plant fitness when resources are limited. One key trade-off is the growth-reproduction trade-off \citep{stearns1998evolution}, which can lead to high variability in reproduction across years. In many species, this is manifested as mast seeding, the phenomenon of synchronized variable seed production within plant populations \citep{kelly1994evolutionary}.
 
-Mast seeding plays a critical role in forest dynamics. It directly affects forest recruitment by increasing seed survival rates during mast years due to synchronized large seed crops \citep{bogdziewicz2020flowering, crone2014resource, silvertown1980evolutionary}. It also indirectly regulates populations of seed predators and pathogens by creating cycles of satiation and starvation \citep{davies2024seed, janzen1971seed}. Mast seeding not only improves short-term seedling survival but also promotes long-term forest regeneration, helping to maintain sustainable forest ecosystems over time. 
+Mast seeding plays a critical role in forest dynamics. It directly affects forest recruitment by increasing seed survival rates during mast years due to synchronized large seed crops \citep{silvertown1980evolutionary}. It also indirectly regulates populations of seed predators and pathogens by creating cycles of satiation and starvation \citep{janzen1971seed}. Mast seeding not only improves short-term seedling survival but also promotes long-term forest regeneration, helping to maintain sustainable forest ecosystems over time. 
 
-Mast seeding is critical to forest ecosystems but also varies based on climate. The exact timing and synchrony of mast seeding appears triggered by certain environmental factors \citep{pearse2016mechanisms}. Further, resource availability determines seed crops and thus often co-varies with climate \citep{hacket2016consistent, bajocco2021characterizing, koenig2020can, redmond2019resource, sanchez2011trade}. These connections have led to growing concerns that masting may `break-down' with continued climate change. Yet predicting this has proven challenging because it requires understanding how the climate triggers masting and how trees allocate resources to seed crops. The allocation also has broader implications for forest productivity and the global carbon cycle, depending on whether additional carbon is invested in wood growth or seed production.
+Mast seeding is critical to forest ecosystems but also varies based on climate. The exact timing and synchrony of mast seeding appears triggered by certain environmental factors \citep{pearse2016mechanisms}. Further, resource availability determines seed crops and thus often co-varies with climate \citep{hacket2016consistent}. These connections have led to growing concerns that masting may `break-down' with continued climate change. Yet predicting this has proven challenging because it requires understanding how the climate triggers masting and how trees allocate resources to seed crops. The allocation also has broader implications for forest productivity and the global carbon cycle, depending on whether additional carbon is invested in wood growth or seed production.
 
 \setlength{\columnsep}{1pt}
-\setlength{\intextsep}{1pt}
+\setlength{\intextsep}{0pt}
 
 \begin{wrapfigure}{r}{0.6\textwidth}
     \centering
     \includegraphics[width=\linewidth]{conceptualFigure.png}
     \setlength{\abovecaptionskip}{0pt}
-    \caption{My project will test two contrasting allocation strategies, which make different predictions for growth and reproduction with climate change.}
+    \caption{Two contrasting allocation strategies, which make different predictions for growth and reproduction with changing climate.}
     \label{fig:cons}
 \end{wrapfigure}
-Two major contrasting hypotheses exist for allocation strategies that may determine masting. In the first, a fixed fraction of resources is allocated to reproduction every year and masting occurs after enough resources have been accumulated \citep{kelly1994evolutionary}, commonly referred to as `constant allocation in \ref{fig:cons}). However, the growth-reproduction trade-off  would suggest that increased investment in one process comes at the expense of the other \citep{grime1977evidence, stearns1998evolution}. Thus, a more likely hypothesis is the second, in which allocation to growth and reproduction are non-constant and instead depend on environmental cues or environmental `vetos' \citep{hacket2016tree, pearse2016mechanisms} (commonly referred as `non-constant allocation' in \ref{fig:cons}). Because each strategy makes different predictions for masting with climate change, identifying which strategy is commonly used is critical for accurate predictions of masting. 
+Two major contrasting hypotheses exist for allocation strategies that may determine masting. In the first, a fixed fraction of resources is allocated to reproduction every year and masting occurs after enough resources have been accumulated \citep{kelly1994evolutionary}, (commonly referred to as `constant allocation' in Figure \ref{fig:cons}). However, the growth-reproduction trade-off  would suggest that increased investment in one process comes at the expense of the other \citep{stearns1998evolution}. Thus, a more likely hypothesis is the second, in which allocation to growth and reproduction are non-constant and instead depend on environmental cues or environmental `vetos' \citep{pearse2016mechanisms} (commonly referred as `non-constant allocation' in Figure  \ref{fig:cons}). Because each strategy makes different predictions for masting with climate change, identifying which strategy is commonly used is critical for accurate predictions of masting. 
 
 Masting concentrates reproduction into particular years, yet we do not know how strongly reproductive investment trades off against growth across years, whether this varies among species, or whether environmental conditions matters. This knowledge gap limits our ability to develop predictive models of masting that account for the physiological consequences of reproduction. In this proposed project, I will combine tree-ring and long-term seed trap data from two sites in the Pacific Northwest to quantify annual variation in growth and reproduction across six major conifer species. I will address one central research question: Is there a detectable trade-off between reproductive investment and growth? I will further test whether this potential relationship varies across species and environments, and leverage my findings to improve predictions of future seed production under climate change.  My objectives are (1) to test whether increased reproduction is associated with reduced current or subsequent growth across elevation gradients in different species to identify which allocation strategy, constant or non-constant is supported in the context of masting and (2) to develop predictive models of seed production incorporating the empirically estimated allocation relationship to forecast future seed production under changing climate. I hypothesize that reproductive investment will reduce growth more strongly under environmentally stressful conditions, resulting a stronger growth-reproduction trade-off at higher elevations.
 
 \textbf{Methods}
-Although resource allocation cannot be measured directly over long time periods, annual radial growth and seed production provide complementary proxies for investment in vegetative growth and reproduction. We have already collected tree cores at Mount Tahoma, with a planned extension to Smithers, BC, where our lab has been collecting seedling data for several years. Together, these sites provide a broad latitudinal and environmental gradient that allows us to test how growth-reproduction relationships vary across environments and inform predictions of how masting may respond to future climate change\citep{hacket2021climate, korner2007use}. Many of the species are distributed across the sites, allowing us to build models that may work across the species range. Thus, conclusions from this study can potentially be extended to the broader Pacific Northwest and used to inform models that predict future growth and seed production.
-
-We will combine:
+Although resource allocation cannot be measured directly over long time periods, annual radial growth and seed production provide complementary proxies for investment in vegetative growth and reproduction. We have already collected tree cores at Mount Tahoma, with a planned extension to Smithers, BC, where our lab has been collecting seedling data for several years. Together, these sites provide a broad latitudinal and environmental gradient that allows us to test how growth-reproduction relationships vary across environments and inform predictions of how masting may respond to future climate change\citep{hacket2021climate}. Many of the species are distributed across the sites, allowing us to build models that may work across the species range. Thus, conclusions from this study can potentially be extended to the broader Pacific Northwest and used to inform models that predict future growth and seed production. We will combine:
 
 \begin{itemize}
 \item \textbf{Seed data} Long-term seed trap data (2008–present) collected by our collaborator Dr. Janneke Hille Ris Lambers, which records seed production by species across multiple forest stands.
