@@ -16,3 +16,4 @@ analyses/.Rhistory
 *.out
 *.run.xml
 *.pptx
+committee/*.pptx
